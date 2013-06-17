@@ -1,9 +1,9 @@
 upstream unicorn {
-  server unix:/tmp/unicorn.blog.sock fail_timeout=0;
+  server unix:/tmp/letsfleelaunch.sock fail_timeout=0;
 }
 
 server {
-  listen 8080 default deferred;
+  listen 8080;
   # server_name letsflee.com;
   root /var/www/letsfleelaunch/current/public;
 
