@@ -1,9 +1,10 @@
 root = "/var/www/letsfleelaunch/current"
 working_directory root
-pid "#{root}/tmp/pids/unicorn.pid"
-stderr_path "#{root}/log/unicorn.log"
-stdout_path "#{root}/log/unicorn.log"
+pid "#{root}/tmp/pids/letsfleelaunch.pid"
+shared_path = "#{root}/shared"
+stderr_path "#{root}/log/unicorn.stderr.log"
+stdout_path "#{root}/log/unicorn.stdout.log"
 
-listen "/tmp/unicorn.blog.sock"
-worker_processes 2
+listen "/tmp/letsfleelaunch.sock"
+worker_processes 4
 timeout 30
