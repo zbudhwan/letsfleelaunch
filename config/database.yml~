@@ -23,7 +23,7 @@ test:
   database: letsflee_test
   pool: 5
   username: root
-  password: C@nucks1
+  password:
   socket: /var/run/mysqld/mysqld.sock
 
 production:
