@@ -29,7 +29,7 @@ body
 {
 
 
-  background: url('../images/admin.jpg') no-repeat center center fixed;
+  background: url('admin.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -51,7 +51,7 @@ body
 
 
 .fleeformcontainer{height:100px;width:790px;position:fixed;top:50%;left:50%;margin-left: -450px;}
-.headlinecontainer{position:fixed;top:25%;}
+.headlinecontainer{position:fixed; top:20%; border:none;}
 .footercontainer{position:fixed;top:90%;left:80%;}
 
   html , body{ margin:0;padding:0;height:100%;}
@@ -68,3 +68,4 @@ body
 .headline{font-size:56px;color:green;}
 
 .footer{font-size:12px;color:black;}
+.frontselect{padding-right:10px;}
