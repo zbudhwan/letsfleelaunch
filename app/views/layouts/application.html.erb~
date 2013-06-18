@@ -44,7 +44,7 @@
               <% if user_signed_in? %>
               <li><%= image_tag current_user.picture, class:"fbpic" %></li>
               <li><span style="color:black;"> <%= current_user.name %></span></li>
-              <li><%= link_to "Logout", destroy_user_session_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
               <% else %>
               <li><%= link_to (image_tag "fb-connect.png"), user_omniauth_authorize_path(:facebook)  %></li>
 
@@ -54,19 +54,11 @@
       </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="row">
-          <div class="span12">
+
             <%= bootstrap_flash %>
             <%= yield %>
-          </div>
-       </div>
 
-      <footer>
-        <p>&copy; Let's Flee 2013</p>
-      </footer>
 
-    </div> <!-- /container -->
 
     <!-- Javascripts
     ================================================== -->
