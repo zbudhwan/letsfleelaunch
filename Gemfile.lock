@@ -43,15 +43,19 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     commonjs (0.2.6)
-    devise (1.5.4)
+    devise (3.0.0.rc)
       bcrypt-ruby (~> 3.0)
-      orm_adapter (~> 0.0.3)
-      warden (~> 1.1)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.1)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     faraday (0.8.7)
       multipart-post (~> 1.1)
+    figaro (0.6.4)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     hashie (2.0.5)
     highline (1.6.19)
     hike (1.2.3)
@@ -101,7 +105,7 @@ GEM
     omniauth-oauth2 (1.1.1)
       oauth2 (~> 0.8.0)
       omniauth (~> 1.0)
-    orm_adapter (0.0.7)
+    orm_adapter (0.4.0)
     polyglot (0.3.3)
     protected_attributes (1.0.1)
       activemodel (>= 4.0.0.beta, < 5.0)
@@ -177,7 +181,8 @@ PLATFORMS
 DEPENDENCIES
   capistrano
   coffee-rails (~> 4.0.0)
-  devise
+  devise (~> 3.0.0.rc)
+  figaro
   jbuilder (~> 1.0.1)
   jquery-rails
   less-rails

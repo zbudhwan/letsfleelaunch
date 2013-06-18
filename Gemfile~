@@ -49,6 +49,7 @@ gem 'capistrano', group: :development
 gem 'less-rails'
 gem 'therubyracer'
 gem 'twitter-bootstrap-rails'
-gem 'devise'
+gem 'devise', '~>3.0.0.rc'
 gem 'omniauth-facebook'
 gem 'protected_attributes'
+gem 'figaro'
