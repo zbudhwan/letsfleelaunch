@@ -1,5 +1,4 @@
 require "bundler/capistrano"
-set :default_environment, {'LD_LIBRARY_PATH' => '/usr/local/lib'}
 server "198.199.68.206", :web, :app, :db, primary: true
 
 set :application, "letsfleelaunch"
