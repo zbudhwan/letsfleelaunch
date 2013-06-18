@@ -1,5 +1,10 @@
 @import "twitter/bootstrap/bootstrap";
 body { padding-top:40px;}
+.brand {height:25px;
+        padding:none;
+        margin:none;
+        }
+.navbar {padding:0;}
 @import "twitter/bootstrap/responsive";
 
 // Set the correct sprite paths
@@ -29,5 +34,7 @@ body { padding-top:40px;}
 //
 // Example:
 // @linkColor: #ff0000;
-@navbarBackground: white;
-@textColor: @redDark;
+@navbarBackground: @white;
+@navbarBrandColor: #9D1D20;
+@textColor: #9D1D20;
+@bodyBackground: @black;

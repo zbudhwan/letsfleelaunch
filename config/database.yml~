@@ -33,5 +33,5 @@ production:
   database: letsflee_production
   pool: 5
   username: root
-  password: C@nucks1
+  password: n@than
   socket: /var/run/mysqld/mysqld.sock

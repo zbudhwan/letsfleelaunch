@@ -32,6 +32,7 @@ production:
   reconnect: false
   database: letsflee_production
   pool: 5
+  host: localhost
   username: root
   password: n@than
   socket: /var/run/mysqld/mysqld.sock

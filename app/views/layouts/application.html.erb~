@@ -39,15 +39,10 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Lets Flee</a>
-          <div class="container nav-collapse">
+          <a class="brand" href="/"><%= image_tag "logo.png" %></a>
             <ul class="nav pull-right">
               <li><%= link_to "Facebook Connect", "/path1"  %></li>
             </ul>
-          </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
@@ -61,7 +56,7 @@
        </div>
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p>&copy; Let's Flee 2013</p>
       </footer>
 
     </div> <!-- /container -->

@@ -1,5 +1,6 @@
-Letsfleelaunch::Application.routes.draw do  root 'welcome#index'
-
+Letsfleelaunch::Application.routes.draw do
+  devise_for :users, path_names: {sign_in: "login", sign_out: "logout"}
+  root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
