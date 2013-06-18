@@ -3,7 +3,7 @@ server "198.199.68.206", :web, :app, :db, primary: true
 
 set :application, "letsfleelaunch"
 set :user, "root"
-set :deploy_to, "/var/www/letsfleelaunch"
+set :deploy_to, "/var/www/letsfleelaunch/"
 set :deploy_via, :remote_cache
 set :use_sudo, false
 
@@ -33,12 +33,7 @@ namespace :deploy do
       end
     end
 
-    task :symlink, roles: :web do
-      run ("rm -rf #{latest_release}/public/assets &&
-            mkdir -p #{latest_release}/public &&
-            mkdir -p #{shared_path}/assets &&
-            ln -s #{shared_path}/assets #{latest_release}/public/assets")
-    end
+
   end
   %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
