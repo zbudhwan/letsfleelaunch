@@ -44,8 +44,10 @@
               <% if user_signed_in? %>
               <li><%= image_tag current_user.picture, class:"fbpic" %></li>
               <li><span style="color:black;"> <%= current_user.name %></span></li>
+              <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
               <% else %>
-              <li><%= link_to "Facebook Login", user_omniauth_authorize_path(:facebook)  %></li>
+              <li><%= link_to (image_tag "fb-connect.png"), user_omniauth_authorize_path(:facebook)  %></li>
+
               <% end %>
             </ul>
         </div>
