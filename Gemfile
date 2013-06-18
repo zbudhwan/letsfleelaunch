@@ -33,8 +33,9 @@ group :doc do
 end
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
+gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'orm_adapter'
+gem 'execjs'
 # Use unicorn as the app server
 group :production do
   gem 'unicorn'
@@ -53,5 +54,5 @@ gem 'devise', '~> 3.0.0.rc'
 gem 'omniauth-facebook', '~> 1.4.0'
 gem 'protected_attributes'
 gem 'figaro'
-gem 'koala'
+gem 'koala', '~>1.7.0rc1'
 gem 'certified'
