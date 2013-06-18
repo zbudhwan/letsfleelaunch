@@ -5,7 +5,7 @@ upstream unicorn {
 server {
   listen 80;
   # server_name letsflee.com;
-  root /var/www/letsfleelaunch/current/public;
+  root /var/www/letsfleelaunch/current;
 
   location ^~ /assets/ {
     gzip_static on;
