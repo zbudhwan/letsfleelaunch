@@ -3,11 +3,10 @@ class User < ActiveRecord::Base
   # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
   devise :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  devise :omniauthable, :omniauth_providers => [:facebook]
+  devise :omniauthable
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
-  attr_accessible :provider, :uid, :name
-  validates_uniqueness_of :uid, :email
+  attr_accessible :provider, :uid, :name, :picture
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
       user.provider = auth.provider
