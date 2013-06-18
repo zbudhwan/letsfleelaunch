@@ -1,19 +1,23 @@
 
         <div class="container-fluid">
-	   <div class="span8 offset2  headlinecontainer">	
-		<div class="page-header">
-			<h1>What Are You Interested In?</h1>
+	   <div class="span8 offset2">	
+		<div class="frontheader">
+			<h1><strong>What Are You Interested In?<strong></h1>
 		</div>
           </div>
 
 
 
         <div class="row-fluid fleeformcontainer">
-          <div class="span6 offset3">
+          <div class="span8 offset1">
             <form class="form-inline">
-              <%= collection_select( :interests, :titleize, Interest.all, :id,:title,  {prompt: "Select an Interest"}) %> 
-              <button class="btn btn-danger btn-large">Let's Flee <i class="icon-fighter-jet"></i></button>
-        </form>
+		<div class="span3 vertical-align">
+                   <%= collection_select( :interests, :titleize, Interest.all, :id,:title,  {prompt: "Select an Interest"}) %> 
+                </div>
+                <div class="span3 offset3">              
+                    <button class="btn btn-danger btn-large">Let's Flee <i class="icon-fighter-jet"></i></button>
+                </div>
+           </form>
         </div>
         </div>
 
