@@ -1,4 +1,5 @@
 require "bundler/capistrano"
+set :default_environment, {'LD_LIBRARY_PATH' => '/usr/local/lib'}
 server "198.199.68.206", :web, :app, :db, primary: true
 
 set :application, "letsfleelaunch"
@@ -40,7 +41,7 @@ namespace :deploy do
             ln -s #{shared_path}/assets #{latest_release}/public/assets")
     end
   end
-  %w[start restart stop start].each do |command|
+  %w[start stop restart].each do |command|
     desc "#{command} unicorn server"
     task command, roles: :app, except: {no_release: true} do
       run "/etc/init.d/unicorn_#{application} #{command}"
