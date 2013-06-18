@@ -196,7 +196,7 @@ Devise.setup do |config|
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
-  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], {scope: 'publish_stream, offline_access, email', :client_options => {:ssl => {:ca_file => "/etc/ssl/certs/ca-certificates.crt"}}}
+  config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], {scope: 'publish_stream, offline_access, email', :client_options => {:ssl => {:ca_path => "/etc/ssl/certs/"}}}
   OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
