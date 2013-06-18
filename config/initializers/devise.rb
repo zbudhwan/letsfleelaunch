@@ -197,7 +197,7 @@ Devise.setup do |config|
   # Add a new OmniAuth provider. Check the wiki for more information on setting
   # up on your models and hooks.
   config.omniauth :facebook, ENV['FACEBOOK_APP_ID'], ENV['FACEBOOK_APP_SECRET'], {scope: 'publish_stream, offline_access, email', :client_options => {:ssl => {:ca_path => "/etc/ssl/certs/"}}}
-  OmniAuth.config.full_host = "http://198.199.68.206"
+  OmniAuth.config.full_host = "http://localhost:3000"
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.
