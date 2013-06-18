@@ -8,7 +8,8 @@ Letsfleelaunch::Application.configure do
 
   # Do not eager load code on boot.
   config.eager_load = false
-
+  ENV['FACEBOOK_APP_ID'] = '496755510395510'
+  ENV['FACEBOOK_APP_SECRET'] = '96e18485ac4c883d96488ce6b578de6c'
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false

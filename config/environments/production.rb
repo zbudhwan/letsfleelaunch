@@ -3,8 +3,8 @@ Letsfleelaunch::Application.configure do
 
   # Code is not reloaded between requests.
   config.cache_classes = true
-  FACEBOOK_APP_ID: 146253768900648
-  FACEBOOK_APP_SECRET: 8651907ca26be9802bbce786563e2891
+  ENV['FACEBOOK_APP_ID'] =  '146253768900648'
+  ENV['FACEBOOK_APP_SECRET'] = '8651907ca26be9802bbce786563e2891'
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both thread web servers
   # and those relying on copy on write to perform better.
