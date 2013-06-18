@@ -5,5 +5,7 @@ class ApplicationController < ActionController::Base
   def login_required
     redirect_to('/') if current_user.blank?
   end
-
+  def after_sign_in_path_for(resource)
+   root_url
+  end
 end
