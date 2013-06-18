@@ -42,4 +42,17 @@ def update_with_password(params, *options)
     super
   end
 end
+def facebook
+		begin
+			@facebook ||= Koala::Facebook::API.new(oauth_token)
+			block_given? ? yield(@facebook) : @facebook
+		rescue Koala::Facebook::APIError => e
+			logger.info e.to_s
+			nil # or consider a custom null object
+		end
+	end
+
+	def friends_count
+		facebook { |fb| fb.get_connection("me", "friends").size }
+	end
 end
