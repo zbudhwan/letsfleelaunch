@@ -26,7 +26,7 @@ def self.new_with_session(params, session)
       user.valid?
     end
   else
-    redirect_to_root_url
+    super
   end
 end
 
