@@ -15,7 +15,6 @@ class User < ActiveRecord::Base
       user.password = Devise.friendly_token[0,20]
       user.email = auth.info.email
       user.oauth_token = auth.credentials.token
-      user.oauth_expires_at = Time.at(auth.credentials.expires_at) unless auth.credtials.expires_at.nil?
       user.save!
     end
   end
@@ -27,7 +26,7 @@ def self.new_with_session(params, session)
       user.valid?
     end
   else
-    super
+    redirect_to_root_url
   end
 end
 
