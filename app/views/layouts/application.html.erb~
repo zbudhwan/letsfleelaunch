@@ -41,7 +41,11 @@
         <div class="container">
           <a class="brand" href="/"><%= image_tag "logo.png" %></a>
             <ul class="nav pull-right">
+              <% if user_signed_in? %>
+              <li><%= image_tag current_user.picture, class:"fbpic" %> <% current_user.name %></li>
+              <% else %>
               <li><%= link_to "Facebook Login", user_omniauth_authorize_path(:facebook)  %></li>
+              <% end %>
             </ul>
         </div>
       </div>
